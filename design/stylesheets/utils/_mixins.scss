@@ -1,0 +1,12 @@
+
+@mixin ellipsis-after-x-lines($component-font-size, $lines-to-show) {
+  // Multiline ellipsis
+  // http://codepen.io/martinwolf/pen/qlFdp
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: ceil(($component-font-size * ($lines-to-show + 0.7))); /* Fallback for non-webkit */
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
